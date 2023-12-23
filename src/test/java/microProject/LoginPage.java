@@ -1,7 +1,9 @@
 package microProject;
+
 import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class LoginPage {
 
     public static void isContinue() throws SQLException, ClassNotFoundException {
@@ -42,14 +44,14 @@ public class LoginPage {
                     isContinue();
                     break;
                 case 2:
-                   Student_LoginPage.Login();
+                    Student_LoginPage.Login();
                     System.out.println("-----------------------------------------------------------------");
                     isContinue();
                     break;
                 case 3:
-                  utility.show_data();
-                  System.out.println("-----------------------------------------------------------");
-                  isContinue();
+                    utility.show_data();
+                    System.out.println("-----------------------------------------------------------");
+                    isContinue();
                     break;
                 case 4:
                     utility.getData_Id();

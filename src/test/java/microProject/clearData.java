@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class clearData extends Student_LoginPage{
+public class clearData extends Student_LoginPage {
     static String user;
     static String username1;
     static String username;
@@ -16,12 +16,13 @@ public class clearData extends Student_LoginPage{
         pt = con.prepareStatement(query);
         System.out.println("Enter username");
         username1 = sc.next();
-        pt.setString(1,username1);
+        pt.setString(1, username1);
         ResultSet rs = pt.executeQuery();
         while (rs.next()) {
             user = rs.getString(2);
         }
     }
+
     public static void clear_data() throws SQLException, ClassNotFoundException {
         getuser();
         Scanner sc = new Scanner(System.in);
@@ -32,7 +33,7 @@ public class clearData extends Student_LoginPage{
             pt.executeUpdate();
             System.out.println("record cleared");
 
-        }else {
+        } else {
             System.out.println("Enter correct username");
             clear_data();
         }
